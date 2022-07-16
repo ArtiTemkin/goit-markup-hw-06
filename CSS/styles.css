@@ -18,6 +18,12 @@ a {
 h1,h2,h3,h4 {
     margin:auto;
 }
+input {
+    border: 0 none;
+}
+input:focus {
+    outline: none;
+}
 /* Стили для обнуления верхних отступов у элементов */
 h1,
 h2,
@@ -461,8 +467,10 @@ footer .contacts {
 .cta {
     margin-top: 12px;
     margin-left: 70px;
+    margin-right: 93px;
 }
-.cta h3 {
+.cta,
+.subscribe h3 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -471,6 +479,43 @@ footer .contacts {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #FFFFFF;
+}
+.subscribe {
+    margin-top: 12px;
+}
+.form-subsribe {
+    display: flex;
+    align-items: center;
+}
+.button-subsribe {
+    position: relative;
+    padding: 0;
+    margin-top: 20px;
+}
+.subsribe-icon {
+    position: absolute;
+    top: 13px;
+    right: 28px;
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+}
+.subsribe-text {
+    position: absolute;
+    top: 10px;
+    left: 29px;
+}
+.footer-section input {
+    height: 50px;
+    width: 358px;
+    background-color: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    padding: 15px 16px;
+    margin-top: 20px;
+    margin-right: 12px;
+
 }
 .footer-social-list {
     display: flex;
@@ -501,6 +546,7 @@ footer .contacts {
 .footer-social-list-item:not(:last-child) {
     margin-right: 10px;
 }
+
 /* main portfolio  */
 .main-portfolio {
     padding-top: 94px;
@@ -675,6 +721,8 @@ footer .contacts {
     background: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+    padding: 40px;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-button {
     position: absolute;
@@ -686,10 +734,153 @@ footer .contacts {
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     background-color: #fff;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+}
+.modal-button:hover,
+.modal-button:focus {
+    border-color: var(--hover-backgroundcolor);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-button:hover .close-button,
+.modal-button:focus .close-button {
+    fill: var(--hover-backgroundcolor);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close-button {
     width: 11px;
     height: 11px;
     fill: black;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+    margin-bottom: 12px;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+}
+.label-name,
+.label-phone,
+.label-mail {
+    position: relative;
+}
+.label-name,
+.label-phone,
+.label-mail,
+.label-comment {
+    Font-size: 12px;
+    Line-height: 1.2;
+    Letter-spacing: 1%;
+    color: rgba(117, 117, 117, 1);
+}
+.modal-input {
+    margin-top: 4px;
+    margin-bottom: 10px;
+    padding: 12px 15px 12px 42px;
+    height: 40px;
+    width: 100%;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}.modal-input + svg {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-input:focus-within {
+    border-color: var(--hover-backgroundcolor);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-input:focus + svg {
+    fill: var(--hover-backgroundcolor);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.user-icon,
+.cellphone-icon {
+    position: absolute;
+    top: 33px;
+    left: 14px;
+    width: 12px;
+    height: 12px;
+}
+.black-mail-icon {
+    position: absolute;
+    top: 31px;
+    left: 15px;
+    width: 18px;
+    height: 15px;
+}
+
+.textarea {
+    margin-top: 4px;
+    padding: 12px 16px;
+    height: 120px;
+    resize: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    margin-bottom: 20px;
+    outline: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+.textarea::placeholder {
+    color:rgba(117, 117, 117, 0.5);
+    Font-size: 12px;
+    Line-height: 1.2;
+    Letter-spacing: 1%;
+}
+.textarea:focus {
+    border-color: var(--hover-backgroundcolor);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.label-checkbox {
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.original-checkbox {
+    appearance: none;
+}
+.icon-checkbox {
+    /* position: absolute; */
+    width: 16px;
+    height: 15px;
+    border: 2px solid #212121;
+    border-radius: 2px;
+    /* background-color: var(--hover-backgroundcolor); */
+}
+.terms-conditions {
+    display: flex;
+}
+.conditions {
+    position: relative;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: #757575;
+    margin-bottom: 0;
+    margin-left: 9px;
+}
+.conditions-link {
+    color: rgba(33, 150, 243, 1);
+    text-decoration: underline;
+}
+.original-checkbox:checked + .icon-checkbox {
+    border-color: var(--hover-backgroundcolor);
+    background-color: var(--hover-backgroundcolor);
+    background-image: url(../images/check.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.modal .button {
+   margin: 30px 125px 0;
+
 }
