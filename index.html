@@ -340,7 +340,7 @@
                 </address>
             </div> 
             <div class="cta">
-                <h3>присоединяйтесь</h3>
+                <h3 class="">присоединяйтесь</h3>
                 <ul class="footer-social-list">
                     <li class="footer-social-list-item">
                         <a href="#" class="footer-link-area">
@@ -376,7 +376,7 @@
                 <h3>Подпишитесь на рассылку</h3>
                 <form class="form-subsribe">
                     <label for="user-email"></label>
-                    <input type="email" name="mail" id="user-email" placeholder="E-mail">
+                    <input class="subsribe-input" type="email" name="mail" id="user-email" placeholder="E-mail">
                     <button type="submit" class="button button-subsribe"><span class="subsribe-text">Подписаться</span>
                         <svg class="subsribe-icon">
                             <use href="./images/symbol-defs.svg#icon-send"></use>
@@ -399,22 +399,28 @@
             <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
             <form class="form">
                 <label class="label-name label" for="name">Имя
-                    <input class="modal-input" type="text" name="name" id="name">
-                    <svg class="user-icon">
-                        <use href="./images/symbol-defs.svg#icon-user"></use>
-                    </svg>
+                    <div class="input">
+                        <input class="modal-input" type="text" name="name" id="name">
+                        <svg class="user-icon">
+                            <use href="./images/symbol-defs.svg#icon-user"></use>
+                        </svg>
+                    </div>
                 </label>
                 <label class="label-phone" for="telefone">Телефон
-                    <input class="modal-input" type="tel" name="telefone" id="telefone">
-                    <svg class="cellphone-icon">
-                        <use href="./images/symbol-defs.svg#icon-cellphone"></use>
-                    </svg>
+                    <div class="input">
+                        <input class="modal-input" type="tel" name="telefone" id="telefone">
+                        <svg class="cellphone-icon">
+                            <use href="./images/symbol-defs.svg#icon-cellphone"></use>
+                        </svg>
+                    </div>
                 </label>
                 <label class="label-mail" for="email">Почта
-                    <input class="modal-input" type="email" name="mail" id="email">
-                    <svg class="black-mail-icon">
-                        <use href="./images/symbol-defs.svg#icon-email-black"></use>
-                    </svg>
+                    <div class="input">
+                        <input class="modal-input" type="email" name="mail" id="email">
+                        <svg class="black-mail-icon">
+                            <use href="./images/symbol-defs.svg#icon-email-black"></use>
+                        </svg>
+                    </div>
                 </label>
                 
                 <label for="comment" class="label-comment">Комментарий</label>
